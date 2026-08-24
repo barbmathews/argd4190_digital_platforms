@@ -1,0 +1,40 @@
+
+        body{
+            background-color: rgba(38, 40, 36, 0.896);}
+        h1 {color: rgb(106, 107, 104);font: size 150px;px;font-family:"Silkscreen"}
+        h2 {color:aliceblue; font-size:x-large; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+        p {color: rgb(208, 208, 209);}
+        .blue-paragraph {color:black}
+        #biggest {font-size: larger; font-optical-sizing: auto;}
+        .buttonhovercolor {hover {color:rgb(255, 157, 0)}}
+        .silkscreen-regular {
+        font-family: "Silkscreen", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        }
+
+        .silkscreen-bold {
+        font-family: "Silkscreen", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        }
+
+        .libre-barcode-39-extended-text-regular {
+        font-family: "Libre Barcode 39 Extended Text", system-ui;
+        font-weight: 400;
+        font-style: normal;
+        }
+
+
+        
+
+
+
+    
+
+        
+        
+        
+    
+    
+        
