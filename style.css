@@ -1,55 +1,62 @@
 
-        body{
-            background-color: rgba(38, 40, 36, 0.896);}
+        body{background-color: rgba(38, 40, 36, 0.896);}
+
+        html{font-size: 16px;}
+
         h1 {color: rgb(106, 107, 104);font-size:185px;font-family: "Rubik 80s Fade", system-ui;
         font-weight: 400; 
         font-style: normal; line-height: normal;}
-        h2 {color:aliceblue; font-size:x-large;font-family: "Syne Mono", monospace;
-        font-weight: 400;
-        font-style: normal}
+
+        h2 {color:aliceblue; font-size: 50px;;font-family: "Silkscreen", sans-serif;
+        font-weight: 700;
+        font-style: normal; line-height: 5;}
+
         p {color: rgb(208, 208, 209); font-family: "Silkscreen", sans-serif;
         font-weight: 400;
-        font-style: normal;}
+        font-style: normal; font-size: 1.5em;}
+
+        .my-container {width: 600px;}
         .blue-paragraph {color:black}
         #biggest {font-size: larger; font-optical-sizing: auto;}
-        .buttonhovercolor {hover {color:rgb(255, 157, 0)}}
 
-
+        .my-button{
+         background-color: rgb(38, 40, 36,0.896);color: rgb(211, 126, 29);padding:10px 20px;border-radius: 9999px;display:inline-block;cursor:pointer;
+        transition: background-color 0.3s ease;font-family:"Rubik Glitch", system-ui;
+        font-weight: 400;
+        font-style: normal;}
+        .my-button:hover{background-color:rgb(211, 126, 29);}    
+        .my-button-container{
+            display:grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap:12px}
+        
         .silkscreen-regular {
         font-family: "Silkscreen", sans-serif;
         font-weight: 400;
-        font-style: normal;
-        }
+        font-style: normal;}
 
         .silkscreen-bold {
         font-family: "Silkscreen", sans-serif;
         font-weight: 700;
-        font-style: normal;
-        }
+        font-style: normal;}
 
         .libre-barcode-39-extended-text-regular {
         font-family: "Libre Barcode 39 Extended Text", system-ui;
         font-weight: 400;
-        font-style: normal;
-        }
+        font-style: normal;}
 
         .syne-mono-regular {
         font-family: "Syne Mono", monospace;
         font-weight: 400;
-        font-style: normal;
-        }
+        font-style: normal;}
 
         .rubik-80s-fade-regular {
         font-family: "Rubik 80s Fade", system-ui;
         font-weight: 400;
-        font-style: normal;
-        }
+        font-style: normal;}
 
         .rubik-glitch-regular {
         font-family: "Rubik Glitch", system-ui;
         font-weight: 400;
-        font-style: normal;
-        }
+        font-style: normal;}
 
 
 
