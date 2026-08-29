@@ -1,17 +1,20 @@
 
-        body{background-color: rgba(38, 40, 36, 0.896);}
+        body{background-color: #96d35f;
+        background-image: radial-gradient(circle farthest-side at 0% 50%, transparent 90%, rgba(0, 0, 0, 1) 91% 100%), radial-gradient(circle farthest-side at 100% 50%, transparent 90%, rgba(0, 0, 0, 1) 91% 100%), radial-gradient(circle farthest-side at 50% 0%, transparent 90%, rgba(0, 0, 0, 1) 91% 100%), radial-gradient(circle farthest-side at 50% 100%, transparent 90%, rgba(0, 0, 0, 1) 91% 100%);
+        background-size: 4px 4px, 4px 4px, 4px 4px, 4px 4px;
+        background-position: -33px 43px;
+        background-repeat: repeat;}
 
         html{font-size: 16px;}
 
-        h1 {color: rgb(106, 107, 104);font-size:185px;font-family: "Rubik 80s Fade", system-ui;
+        h1 {color: rgb(18, 18, 17);font-size:160px;font-family: "Rubik 80s Fade", system-ui;
         font-weight: 400; 
         font-style: normal; line-height: normal;}
 
-        h2 {color:aliceblue; font-size: 50px;;font-family: "Silkscreen", sans-serif;
-        font-weight: 700;
-        font-style: normal; line-height: 5;}
+        h2 {color:rgb(7, 7, 7); font-size: 50px;;font-family: "Rubik Glitch", system-ui;
+        font-weight: 400; font-style: normal; line-height: 5;}
 
-        p {color: rgb(208, 208, 209); font-family: "Silkscreen", sans-serif;
+        p {color: rgb(0, 0, 0); font-family: "freight-big-pro", serif;
         font-weight: 400;
         font-style: normal; font-size: 1.5em;}
 
@@ -20,14 +23,163 @@
         #biggest {font-size: larger; font-optical-sizing: auto;}
 
         .my-button{
-         background-color: rgb(38, 40, 36,0.896);color: rgb(211, 126, 29);padding:10px 20px;border-radius: 9999px;display:inline-block;cursor:pointer;
-        transition: background-color 0.3s ease;font-family:"Rubik Glitch", system-ui;
+        font-style: normal;  appearance: none;
+        background-color: #96d35f;
+        border-radius: 40em;
+        border-style: none;
+        box-shadow: #7c35ee 0 -12px 6px inset;
+        box-sizing: border-box;
+        color: #000000;
+        cursor: pointer;
+        display: inline-block; 
+        font-family: "Libre Barcode 39 Extended Text", system-ui;
         font-weight: 400;
-        font-style: normal;}
-        .my-button:hover{background-color:rgb(211, 126, 29);}    
+        font-style: normal; font-size: 48pt;
+        letter-spacing: -.24px;
+        margin: 0;
+        outline: none;
+        padding: 0.8rem 1rem;
+        quotes: auto;
+        text-align: center;
+        text-decoration: none;
+        transition: all .15s;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        }
+
+        .my-button:hover{background-color: #7c35ee;
+        box-shadow: #7c35ee 0 -6px 8px inset;
+        transform: scale(1.125);
+        }    
+
         .my-button-container{
-            display:grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap:12px}
-        
+        display:grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap:12px}
+
+        .my-button:active {
+        transform: scale(1.025);
+        }
+
+        @media (min-width: 768px) {
+        .my-button {
+            font-size: 1.5rem;
+            padding: .75rem 2rem;
+        }
+        }
+
+        .container {  display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            ".";
+        }
+
+.carousel-wrapper {
+  width: 520px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
+  border-radius: 20px;
+  margin: 100px auto 20px;
+}
+
+.carousel-container {
+  width: 400px;
+  height: 250px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.carousel {
+  display: flex;
+  width: 1200px;
+  animation: sliding 12s infinite;
+}
+.carousel div {
+  width: 400px;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+}
+.carousel:hover {
+  animation-play-state: paused;
+}
+.carousel .image-one {
+  background-image: url("https://images.unsplash.com/photo-1480936600919-bffa6b7ecf1e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+}
+.carousel .image-two {
+  background-image: url("https://images.unsplash.com/photo-1475053081036-c8eb31d187b3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+}
+.carousel .image-three {
+  background-image: url("https://images.unsplash.com/photo-1525278070609-779c7adb7b71?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+}
+
+@keyframes sliding {
+  30% {
+    transform: translateX(0);
+  }
+  35% {
+    transform: translateX(-400px);
+  }
+  65% {
+    transform: translateX(-400px);
+  }
+  70% {
+    transform: translateX(-800px);
+  }
+  98% {
+    transform: translateX(-800px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@media screen and (max-width: 768px) {
+  .carousel-wrapper {
+    width: 312px;
+    height: 210px;
+  }
+
+  .carousel-container {
+    width: 240px;
+    height: 150px;
+  }
+
+  .carousel {
+    width: 720px;
+  }
+  .carousel > div {
+    width: 240px;
+    height: 150px;
+  }
+
+  @keyframes sliding {
+    30% {
+      transform: translateX(0);
+    }
+    35% {
+      transform: translateX(-240px);
+    }
+    65% {
+      transform: translateX(-240px);
+    }
+    70% {
+      transform: translateX(-480px);
+    }
+    98% {
+      transform: translateX(-480px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+}
+
+
         .silkscreen-regular {
         font-family: "Silkscreen", sans-serif;
         font-weight: 400;
@@ -57,6 +209,11 @@
         font-family: "Rubik Glitch", system-ui;
         font-weight: 400;
         font-style: normal;}
+
+
+
+
+
 
 
 
