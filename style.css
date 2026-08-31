@@ -1,5 +1,19 @@
 
-        body{background-color: #96d35f;
+       
+       :root{
+        --font-size-h1:clamp(5rem, 4rem + 5vw, 10rem);
+        --font-size-h2:clamp(2.5rem, 2rem + 2.5vw, 5rem)
+        --font-size-p:clamp(0.4375rem, 0.35rem + 0.43750000000000006vw, 0.875rem)
+       }
+
+       h1{font-size:var(--font-size-h1)}
+
+       h2{font-size:var(--font-size-h2)}
+       
+       p, button, a, li{font-size:var()}
+
+       
+       body{background-color: #96d35f;
         background-image: radial-gradient(circle farthest-side at 0% 50%, transparent 90%, rgba(0, 0, 0, 1) 91% 100%), radial-gradient(circle farthest-side at 100% 50%, transparent 90%, rgba(0, 0, 0, 1) 91% 100%), radial-gradient(circle farthest-side at 50% 0%, transparent 90%, rgba(0, 0, 0, 1) 91% 100%), radial-gradient(circle farthest-side at 50% 100%, transparent 90%, rgba(0, 0, 0, 1) 91% 100%);
         background-size: 4px 4px, 4px 4px, 4px 4px, 4px 4px;
         background-position: -33px 43px;
@@ -17,13 +31,13 @@
         p {color: rgb(0, 0, 0); font-family: "freight-big-pro", serif;
         font-weight: 400;
         font-style: normal; font-size: 14pt;}
-        
+      
 
         .my-container {
         border-radius: 25px;
         background-color: #73AD21;
         padding: 20px;
-        width: 850px;
+        width: 850px;max-width: 100%;
         height: 425px;}
 
         .formClear {
@@ -31,9 +45,9 @@
           height:25px;
         }
 
-        .abcontainer {  display: grid;border-radius: 25px;
+        .abcontainer {  display:flex;flex-wrap: wrap; border-radius: 25px;max-width: 100%;
         background-color: #73AD21;
-        padding: 20px;grid-template-columns: 200px 200px;
+        padding: 200px;grid-template-columns: 200px 200px;
         grid-template-rows: 200px 200px;
         gap: 2px 2px;
         grid-auto-flow: row;
@@ -41,7 +55,7 @@
         grid-template-areas:
           ". . . . ."
           ". . . . ."
-      }
+        }
 
 
         .my-button{
@@ -76,7 +90,7 @@
         }    
 
         .my-button-container{
-        display:grid; grid-auto-flow: column; grid-auto-columns:max-content; gap:12px}
+        display:flex; grid-auto-flow: column; grid-auto-columns:max-content; gap:12px}
 
 
         .my-button:active {
@@ -90,9 +104,11 @@
         }
         }
 
-        .container {  display: grid;
+        .container {  display:flex;
+        flex-wrap: wrap;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
+        max-width: 100%;
         gap: 0px 0px;
         grid-auto-flow: row;
         grid-template-areas:
@@ -100,9 +116,11 @@
         }
 
         .carousel-wrapper {
-          width: 730px;
-          height: 487px;
+          width: 700px;
+          max-width: 100%;
+          height: 457px;
           display: flex;
+          flex-wrap: wrap;
           justify-content: center;
           align-items: center;
           box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
@@ -112,6 +130,7 @@
 
         .carousel-container {
           width: 400px;
+          max-width: 100%;
           height: 250px;
           overflow: hidden;
           margin: 0 auto;
@@ -141,7 +160,21 @@
           background-image: url("https://images.unsplash.com/photo-1525278070609-779c7adb7b71?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
         }
 
-        .index_grid{display:grid; grid-auto-flow: column; grid-auto-columns:max-content; gap:12px}
+        .index_grid{display:flex; flex-wrap: wrap; height: min-content; justify-content:space-around; align-items: center; grid-auto-flow: column; grid-auto-columns:max-content; gap:12px}
+
+        .box1{border: 2px #000000; background: #73AD21; padding: 8rem;max-width:100%}
+        .box2{border: 2px #000000; background: #96d35f; padding: 8rem;max-width:100%}
+        .box3{border: 2px #000000; padding: 8rem;box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);max-width:100%}
+        .box4{border: 2px #000000; background: #96d35f; padding: 8rem;max-width:100%}
+        .box5{border: 2px #000000; background: #73AD21; padding: 8rem;max-width:100%}
+        .box6{border: 2px #000000; padding: 8rem;box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);max-width:100%}
+        .box7{border: 2px #000000; background: #73AD21; padding: 8rem;max-width:100%}
+        .box8{border: 2px #000000; background: #96d35f; padding: 8rem;max-width:100%}
+        .box9{border: 2px #000000; padding: 8rem;box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);max-width:100%}
+        .box10{border: 2px #000000; background: #96d35f; padding: 8rem;max-width:100%}
+        .box11{border: 2px #000000; background: #96d35f; padding: 8rem;max-width:100%}
+        .box12{border: 2px #000000; padding: 8rem;box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);max-width:100%}
+        
 
         @keyframes sliding {
           30% {
@@ -163,7 +196,7 @@
             transform: translateX(0);
           }
         }
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width:100%) {
           .carousel-wrapper {
             width: 312px;
             height: 210px;
@@ -203,6 +236,23 @@
             }
           }
         }
+
+        .portcontainer{
+        display: flex; height:min-content; flex-wrap: wrap; justify-content:space-between; align-items:center;
+        }
+
+        .box_1{border: 1px #000000; background: #73AD21; padding: 11rem;max-width:100%}
+        .box_2{border: 1px #000000; background: #73AD21; padding: 11rem;max-width:100%}
+        .box_3{border: 1px #000000; background: #73AD21; padding: 11rem;max-width:100%}
+        .box_4{border: 1px #000000; background: #73AD21; padding: 11rem;max-width:100%}
+
+        .sscontainer{
+        display: flex; height:min-content; flex-wrap: wrap; justify-content:space-between; align-items:center;
+        gap: 10px 10px;}
+
+        .box_1_{border: 1px #000000; background: #73AD21; padding: 11rem;max-width:100%}
+        .box_2_{border: 1px #000000; background: #73AD21; padding: 11rem;max-width:100%}
+        .box_3_{border: 1px #000000; background: #73AD21; padding: 11rem;max-width:100%}
 
         .silkscreen-regular {
         font-family: "Silkscreen", sans-serif;
