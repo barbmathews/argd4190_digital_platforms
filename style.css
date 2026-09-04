@@ -1,18 +1,6 @@
 
        
-       :root{
-        --font-size-h1:clamp(5rem, 4rem + 5vw, 10rem);
-        --font-size-h2:clamp(2.5rem, 2rem + 2.5vw, 5rem)
-        --font-size-p:clamp(0.4375rem, 0.35rem + 0.43750000000000006vw, 0.875rem)
-       }
-
-       h1{font-size:var(--font-size-h1)}
-
-       h2{font-size:var(--font-size-h2)}
-       
-       p, button, a, li{font-size:var()}
-
-       
+  
        body{background-color: #96d35f;
         background-image: radial-gradient(circle farthest-side at 0% 50%, transparent 90%, rgba(0, 0, 0, 1) 91% 100%), radial-gradient(circle farthest-side at 100% 50%, transparent 90%, rgba(0, 0, 0, 1) 91% 100%), radial-gradient(circle farthest-side at 50% 0%, transparent 90%, rgba(0, 0, 0, 1) 91% 100%), radial-gradient(circle farthest-side at 50% 100%, transparent 90%, rgba(0, 0, 0, 1) 91% 100%);
         background-size: 4px 4px, 4px 4px, 4px 4px, 4px 4px;
@@ -21,17 +9,18 @@
 
         html{font-size: 16px;}
 
-        h1 {color: rgb(18, 18, 17);font-size:160px;font-family: "Rubik 80s Fade", system-ui;
+        @media screen and (max-width:768px){p {color: rgb(18, 18, 17);font-size:clamp(10rem, 2vw, 10.5rem);font-family: "Rubik 80s Fade", system-ui;
         font-weight: 400; 
         font-style: normal; line-height: normal;}
+        }
 
-        h2 {color:#252a1f; font-size: 80px;;font-family: "Rubik Glitch", system-ui;
+        h2 {color:#252a1f; font-size: clamp(1rem, 2vw, 1.5rem);;font-family: "Rubik Glitch", system-ui;
         font-weight: 400; font-style: normal; line-height: 1;}
 
-        p {color: rgb(0, 0, 0); font-family: "freight-big-pro", serif;
+        @media screen and (max-width:768px){p {color: rgb(0, 0, 0); font-family: "freight-big-pro", serif;
         font-weight: 400;
-        font-style: normal; font-size: 14pt;}
-      
+        font-style: normal; font-size: clamp(1rem, 2vw, 1.5rem);}
+        }
 
         .my-container {
         border-radius: 25px;
@@ -257,12 +246,6 @@
         .box_2{border: 1px #000000; background: #73AD21; padding: 6rem 6rem;max-width:100%}
         .box_3{border: 1px #000000; background: #73AD21; padding: 6rem 6rem;max-width:100%}
         .box_4{border: 1px #000000; background: #73AD21; padding: 6rem 6rem;max-width:100%}
-
-        .imagecontainer{
-        width: 200px;
-        height: 300px;
-        border: 1px solid black;
-        margin-bottom: 25px;object-fit:contain;}
 
         .sscontainer{
         display:grid; grid-template-columns: 1fr 1fr 1fr; column-gap:2rem;row-gap:0.5rem;justify-content:space-between; align-items:center;
