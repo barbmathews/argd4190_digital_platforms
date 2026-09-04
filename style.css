@@ -1,24 +1,76 @@
 
        
   
-       body{background-color: #96d35f;
-        background-image: radial-gradient(circle farthest-side at 0% 50%, transparent 90%, rgba(0, 0, 0, 1) 91% 100%), radial-gradient(circle farthest-side at 100% 50%, transparent 90%, rgba(0, 0, 0, 1) 91% 100%), radial-gradient(circle farthest-side at 50% 0%, transparent 90%, rgba(0, 0, 0, 1) 91% 100%), radial-gradient(circle farthest-side at 50% 100%, transparent 90%, rgba(0, 0, 0, 1) 91% 100%);
-        background-size: 4px 4px, 4px 4px, 4px 4px, 4px 4px;
-        background-position: -33px 43px;
-        background-repeat: repeat;}
+        body{background-color: #96d35f;
+          background-image: radial-gradient(circle farthest-side at 0% 50%, transparent 90%, rgba(0, 0, 0, 1) 91% 100%), radial-gradient(circle farthest-side at 100% 50%, transparent 90%, rgba(0, 0, 0, 1) 91% 100%), radial-gradient(circle farthest-side at 50% 0%, transparent 90%, rgba(0, 0, 0, 1) 91% 100%), radial-gradient(circle farthest-side at 50% 100%, transparent 90%, rgba(0, 0, 0, 1) 91% 100%);
+          background-size: 4px 4px, 4px 4px, 4px 4px, 4px 4px;
+          background-position: -33px 43px;
+          background-repeat: repeat;}
 
-        html{font-size: 16px;}
+        html { font-size: 16px; }
 
-        h1 {color: rgb(18, 18, 17);font-size:clamp(10rem, 2vw, 10.5rem);font-family: "Rubik 80s Fade", system-ui;
+        :root {
+          --cg-font-family-base: 'Merriweather Sans', sans-serif;
+          --cg-font-weight-base: 400;
+          --cg-font-family-head: 'Rubik 80s Fade', display;
+          --cg-font-weight-head: 400;
+          --cg-font-family-p: 'freight-big-pro', serif;
+          --cg-font-weight-p: 400;
+          --cg-font-family-button: 'Libre Barcode 39 Extended Text', serif;
+          --cg-font-weight-p: 400;
+
+          --cg-font-h1: clamp(1.50rem, calc(-12.500rem + 29.167vw), 9.38rem);
+          --cg-font-h2: clamp(1.50rem, calc(-22.500rem + 50.000vw), 15.00rem);
+          --cg-font-button: clamp(0.75rem, calc(-6.250rem + 14.583vw), 4.69rem);
+          --cg-font-p: clamp(0.75rem, calc(-6.250rem + 14.583vw), 4.69rem);
+        
+        }
+
+        /* Font Family Setup */
+        body, .cg-p {
+          font-family: 'freight-big-pro', serif;
+          font-weight: 400;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+          font-family: 'Rubik 80s Fade', display;
+          font-weight: 400;
+        }
+
+        code, .cg-button {
+          font-family: 'Libre Barcode 39 Extended Text';
+          font-weight: 400;
+        }
+
+        /* Typography Sizes with Variables */
+        h1, .cg-h1 {
+          font-size: var(--cg-font-h1);
+        }
+
+        h2, .cg-h2 {
+          font-size: var(--cg-font-h2);
+        }
+
+        h3, .cg-h3 {
+          font-size: var(--cg-font-h3);
+        }
+
+
+        body, .cg-p {
+          font-size: var(--cg-font-p);
+        }
+
+
+        h1 {color: rgb(18, 18, 17);font-family: "Rubik 80s Fade", system-ui;
         font-weight: 400; 
         font-style: normal; line-height: normal;}
 
-        h2 {color:#252a1f; font-size: clamp(1rem, 2vw, 1.5rem);;font-family: "Rubik Glitch", system-ui;
+        h2 {color:#252a1f;font-family: "Rubik Glitch", system-ui;
         font-weight: 400; font-style: normal; line-height: 1;}
 
         @media screen and (max-width:768px){p {color: rgb(0, 0, 0); font-family: "freight-big-pro", serif;
         font-weight: 400;
-        font-style: normal; font-size: clamp(1rem, 2vw, 1.5rem);}
+        font-style: normal;}
         }
 
         .my-container {
@@ -33,7 +85,7 @@
           height:25px;
         }
 
-        .abcontainer {  display:flex;flex-wrap: wrap; border-radius: 25px;max-width: 100%;
+        .abcontainer {display:flex;flex-wrap: wrap; border-radius: 25px;max-width: 100%;
         background-color: #73AD21;
         padding: 200px;grid-template-columns: 200px 200px;
         grid-template-rows: 200px 200px;
@@ -46,7 +98,9 @@
         }
 
 
+        @media (min-width: 35px) {
         .my-button{
+        max-width: 100%;
         font-style: normal;  appearance: none;
         background-color: #96d35f;
         border-radius: 40em;
@@ -55,7 +109,8 @@
         box-sizing: border-box;
         color: #000000;
         cursor: pointer;
-        display: inline-block; 
+        display: inline-block;
+        font-size: clamp(0.75rem, calc(-6.250rem + 14.583vw), 4.69rem); 
         font-family: "Libre Barcode 39 Extended Text", system-ui;
         font-weight: 400;
         font-style: normal; font-size: 48pt;
@@ -71,23 +126,22 @@
         -webkit-user-select: none;
         touch-action: manipulation;
         }
-
-        .my-button:hover{background-color: #7c35ee;
+        
+        .my-button:hover{max-width:100%; #7c35ee;
         box-shadow: #7c35ee 0 -6px 8px inset;
         transform: scale(1.125);
         }    
 
         .my-button-container{
-        display:flex; grid-auto-flow: column; grid-auto-columns:max-content; gap:12px}
+        max-width:100%;display:flex; grid-auto-flow: column; grid-auto-columns:max-content; gap:12px;max-width: 100%;}
 
-
+        
         .my-button:active {
-        transform: scale(1.025);
+        max-width:100%;transform: scale(1.025);
         }
 
-        @media (min-width: 768px) {
         .my-button {
-            font-size: 1.5rem;
+            max-width:100%;font-size: clamp(0.75rem, calc(-6.250rem + 14.583vw), 4.69rem);
             padding: .75rem 2rem;
         }
         }
