@@ -221,13 +221,13 @@
           animation-play-state: paused;
         }
         .carousel .image-one {
-          background-image:url(assets/example2.jpeg);
+          background-image:url(assets/buttonscan.png);
         }
         .carousel .image-two {
           background-image: url(assets/example.jpg);
         }
         .carousel .image-three {
-          background-image: url(assets/example3.jpeg);
+          background-image: url(assets/IMG_5031.png);
         }
 
         .index_grid{display:flex; flex-wrap: wrap; height: min-content; justify-content:space-around; align-items: center; grid-auto-flow: column; grid-auto-columns:max-content; gap:12px}
