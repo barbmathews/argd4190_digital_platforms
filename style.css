@@ -1,6 +1,3 @@
-
-       
-  
         body{background-color: #96d35f;
           background-image: radial-gradient(circle farthest-side at 0% 50%, transparent 90%, rgba(0, 0, 0, 1) 91% 100%), radial-gradient(circle farthest-side at 100% 50%, transparent 90%, rgba(0, 0, 0, 1) 91% 100%), radial-gradient(circle farthest-side at 50% 0%, transparent 90%, rgba(0, 0, 0, 1) 91% 100%), radial-gradient(circle farthest-side at 50% 100%, transparent 90%, rgba(0, 0, 0, 1) 91% 100%);
           background-size: 4px 4px, 4px 4px, 4px 4px, 4px 4px;
@@ -150,19 +147,21 @@
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         column-gap: 2rem;
-        row-gap: 0.5rem;
+        row-gap: 2rem;
         max-width: 100%;
         justify-content: center;
+        --space: 30px;
+        --min-height: 190px;
         }
         
         .b1{border: 1px #000000; background: #73AD21; padding: 4rem;max-width:100%}
-        .b2{border: 1px #000000; background: #73AD21; padding: 4rem;max-width:100%}
+        .b2{border: 1px #000000; box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2); padding: 4rem;max-width:100%}
         .b3{border: 1px #000000; background: #73AD21; padding: 4rem;max-width:100%}
-        .b4{border: 1px #000000; background: #73AD21; padding: 4rem;max-width:100%}
+        .b4{border: 1px #000000; box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2); padding: 4rem;max-width:100%}
         .b5{border: 1px #000000; background: #73AD21; padding: 4rem;max-width:100%}
-        .b6{border: 1px #000000; background: #73AD21; padding: 4rem;max-width:100%}
+        .b6{border: 1px #000000; box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2); padding: 4rem;max-width:100%}
         .b7{border: 1px #000000; background: #73AD21; padding: 4rem;max-width:100%}
-        .b8{border: 1px #000000; background: #73AD21; padding: 4rem;max-width:100%}
+        .b8{border: 1px #000000; box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2); padding: 4rem;max-width:100%}
         .b9{border: 1px #000000; background: #73AD21; padding: 4rem;max-width:100%}
       
         
@@ -310,15 +309,14 @@
 
                 /* Settings start */
         .justified-grid-gallery {
-          --space: 4px;
+          --space: 30px;
           --min-height: 190px;
-          --last-row-background: rgb(188 234 153);
         }
         /* Settings end */
 
         .justified-grid-gallery {
-          display: flex;
-          flex-wrap: wrap;
+          display: grid;
+          grid-template-columns: 1fr 1fr; column-gap:8rem; row-gap: 2rem;
           grid-gap: var(--space);
           list-style: none;
           margin: 0 !important; /* We use !important to avoid gaps in some environments. */
@@ -339,12 +337,6 @@
           position: absolute;
           width: 100%;
           height: 100%;
-        }
-
-        .justified-grid-gallery::after {
-          content: " ";
-          flex-grow: 1000000000;
-          background: var(--last-row-background);
         }
 
         .silkscreen-regular {
