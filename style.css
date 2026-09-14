@@ -356,6 +356,10 @@
           height: 100%;
         }
 
+        #para {
+          color:#7c35ee
+        }
+
         .silkscreen-regular {
         font-family: "Silkscreen", sans-serif;
         font-weight: 400;
