@@ -360,6 +360,14 @@
           color:#7c35ee
         }
 
+        .box {
+          width: 100px;
+          height: 100px;
+          display: inline-block;
+          background: yellow;
+        }
+
+
         .silkscreen-regular {
         font-family: "Silkscreen", sans-serif;
         font-weight: 400;
