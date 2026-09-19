@@ -1,39 +1,71 @@
-let numInt=5
-let numFloat=2.5
 
-let student= {
-    name: "Barbara"
-    major: "Graphic Design"
-    age: "21"
+let face = document.getElementById("face")
+let faceColorOutput = document.querySelector("output[for=face-color]")
+let leftEye = document.getElementById("leftEye")
+let rightEye = document.getElementById("rightEye")
+let mouth = document.getElementById("mouth")
+let mouthScaleOutput = document.querySelector("output[for=mouth-scale]")
+let word = document.getElementById("word")
+
+
+let wordInput = document.getElementById("word-input")
+let faceColor = document.getElementById("face-color")
+let leftEyeX = document.getElementById("left-eye-x")
+let leftEyeY = document.getElementById("left-eye-y")
+let rightEyeX = document.getElementById("right-eye-x")
+let rightEyeY = document.getElementById("right-eye-y")
+let mouthScale = document.getElementById("mouth-scale")
+
+function updateOutput(element, input) {
+  element.textContent = input.value
 }
 
-document.getElementById("para").style.color = "purple"
-
-let myElement = document.getElementById("para")
-myElement.style.fontSize = "2rem"
-
-let multiplier = 10
-element2.style.fontSize = multiplier + "px"
-
-function turnGreen(id){
-  document.getElementById(id).style.background = "green"
+function changeText(element, textInput) {
+  element.textContent = textInput.value
 }
-turnGreen("box1")
-turnGreen("box2")
 
-function updateColor(id,bg){
-  document.getElementById(id).style.background = bg
+function changeColor(element, colorInput) {
+  element.style.backgroundColor = colorInput.value
 }
-updateColor("box3", "orange")
-updateColor("box4", "pink")
-updateColor("box5", "chartreuse")
-updateColor("box2", "aqua")
 
-function updateStyles(id,colorValue,borderRadiusValue,scale,rotation){
-  document.getElementById(id).style.background = colorValue
-  document.getElementById(id).style.borderRadius = borderRadiusValue + "px"
-  document.getElementById(id).style.transform = `scale(${scale}) rotate(${rotation}deg)`
+function changePosition(element, xInput, yInput) {
+  element.style.transform = `translate(${xInput.value}px, ${yInput.value}px)`
 }
-updateStyles("box2","black", 50, 1.3)
-updateStyles("box3","purple", 37, 0.44)
-updateStyles("box5","orange", 22, 0.7, 65)
+
+function changeScale(element, scaleInput) {
+  element.style.scale = scaleInput.value
+}
+
+wordInput.addEventListener("input", function (){
+  changeText(word, wordInput);
+})
+
+faceColor.addEventListener("input", function (){
+  changeColor(face, faceColor)
+  updateOutput(faceColorOutput, faceColor)
+})
+
+leftEyeX.addEventListener("input", function (event){
+  changePosition(leftEye, leftEyeX, leftEyeY);
+})
+leftEyeY.addEventListener("input", function (event){
+  changePosition(leftEye, leftEyeX, leftEyeY);
+})
+
+rightEyeX.addEventListener("input", function (event){
+  changePosition(rightEye, rightEyeX, rightEyeY);
+})
+rightEyeY.addEventListener("input", function (event){
+  changePosition(rightEye, rightEyeX, rightEyeY);
+})
+
+mouthScale.addEventListener("input", function (event){
+  changeScale(mouth, mouthScale)
+  updateOutput(mouthScaleOutput, mouthScale)
+})
+
+changePosition(leftEye, leftEyeX, leftEyeY);
+changePosition(rightEye, rightEyeX, rightEyeY);
+updateOutput(faceColorOutput, faceColor)
+updateOutput(mouthScaleOutput, mouthScale)
+
