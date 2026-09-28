@@ -69,3 +69,16 @@ changePosition(rightEye, rightEyeX, rightEyeY);
 updateOutput(faceColorOutput, faceColor)
 updateOutput(mouthScaleOutput, mouthScale)
 
+let stamps
+
+fetch("stamps_1.json").then(response => response.json())
+    .then(json => {
+        console.log(json)
+        stamps = json
+        for(let i = 0; i < stamps.Descriptor; i++) {
+            let stamp = stamps[i]
+            makeStamps(stamp)
+        }
+    })
+    .catch(error => console.log("error", error))
+
