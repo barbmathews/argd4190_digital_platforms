@@ -1,0 +1,47 @@
+[
+  {
+    "title": "Parasite",
+    "year": 2019,
+    "minutes": 132,
+    "genres": "Drama,Thriller",
+    "rated": "R",
+    "path": "assets/parasite.jpeg",
+    "alttext": "Parasite poster: people with their eyes blacked out stand and lie on a lawn in front of a modern house."
+  },
+  {
+    "title": "Spirited Away",
+    "year": 2001,
+    "minutes": 125,
+    "genres": "Animation,Adventure,Fantasy",
+    "rated": "PG",
+    "path": "assets/spirited_away.jpeg",
+    "alttext": "Spirited Away poster: No-Face stands on a red bridge under a blue sky."
+  },
+  {
+    "title": "Arrival",
+    "year": 2016,
+    "minutes": 116,
+    "genres": "Sci-Fi,Drama,Mystery",
+    "rated": "PG-13",
+    "path": "assets/arrival.jpeg",
+    "alttext": "Arrival poster: a lone silhouette stands beneath a giant black ink ring."
+  },
+  {
+    "title": "Everything Everywhere All at Once",
+    "year": 2022,
+    "minutes": 139,
+    "genres": "Action,Comedy,Sci-Fi",
+    "rated": "R",
+    "path": "assets/everything.jpeg",
+    "alttext": "Everything Everywhere All at Once poster: a woman strikes a kung fu pose in front of huge white title letters on red."
+  },
+  {
+    "title": "In the Mood for Love",
+    "year": 2000,
+    "minutes": 98,
+    "genres": "Romance,Drama",
+    "rated": "PG",
+    "path": "assets/in_the_mood.jpeg",
+    "alttext": "In the Mood for Love poster: a woman in a qipao and a man in a suit stand apart against a warm, lamp-lit wall."
+  }
+]

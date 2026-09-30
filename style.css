@@ -387,6 +387,30 @@
           translate: 150px 230px;
         }
 
+        #movies {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card img {
+            width: 100%;
+        }
+
+        .genres {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .selected {
+            background: pink;
+        }
+
 
         .silkscreen-regular {
         font-family: "Silkscreen", sans-serif;
